@@ -21,6 +21,7 @@ import React from "react";
 import Loader from "../Loader";
 import { useThreads } from "@liveblocks/react/suspense";
 import Comments from "../Comments";
+import { DeleteModel } from "../DeleteModel";
 
 function Placeholder() {
   return <div className="editor-placeholder">Enter some rich text...</div>;
@@ -51,7 +52,7 @@ export function Editor({
       <div className="editor-container size-full">
         <div className="toolbar-wrapper flex min-w-full justify-between">
           <ToolbarPlugin />
-          {/* {currentUserType === "editor" && <DeleteModel roomId={roomId}/>} */}
+          {currentUserType === "editor" && <DeleteModel roomId={roomId} />}
         </div>
         <div className="editor-wrapper flex flex-col items-center justify-start">
           {status === "not-loaded" || status === "loading" ? (

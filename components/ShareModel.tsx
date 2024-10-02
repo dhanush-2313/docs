@@ -87,7 +87,7 @@ const ShareModel = ({
                 roomId={roomId}
                 creatorId={creatorId}
                 email={collaborator.email}
-                collaboratorId={collaborator}
+                collaborator={collaborator}
                 user={user.info}
               />
             ))}

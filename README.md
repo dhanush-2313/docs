@@ -1,6 +1,6 @@
 ## DocHub
 
-LiveDocs is a powerful, real-time collaborative document editing platform, inspired by Google Docs. Built with Next.js for the user interface, Liveblocks for real-time collaboration, and styled with TailwindCSS, LiveDocs aims to showcase the developer's expertise in creating a seamless and interactive user experience in a real-time environment.
+DocHub is a powerful, real-time collaborative document editing platform, inspired by Google Docs. Built with Next.js for the user interface, Liveblocks for real-time collaboration, and styled with TailwindCSS, LiveDocs aims to showcase the developer's expertise in creating a seamless and interactive user experience in a real-time environment.
 
 
 ## <a name="tech-stack">⚙️ Tech Stack</a>

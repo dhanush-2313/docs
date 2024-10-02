@@ -24,7 +24,7 @@ export const createDocument = async ({
     const room = await liveblocks.createRoom(roomId, {
       metadata,
       usersAccesses,
-      defaultAccesses: ["room:write"],
+      defaultAccesses: [],
     });
 
     revalidatePath(`/`);
@@ -44,10 +44,10 @@ export const getDocument = async ({
 }) => {
   try {
     const room = await liveblocks.getRoom(roomId);
-    // const hasAccess = Object.keys(room.usersAccesses).includes(userId);
-    // if (!hasAccess) {
-    //   throw new Error("You don't have access to this document");
-    // }
+    const hasAccess = Object.keys(room.usersAccesses).includes(userId);
+    if (!hasAccess) {
+      throw new Error("You don't have access to this document");
+    }
     return parseStringify(room);
   } catch (error) {
     console.log(`Error getting a room: ${error}`);

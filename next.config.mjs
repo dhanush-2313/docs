@@ -16,6 +16,11 @@ export default withSentryConfig(nextConfig, {
 org: "dhanush-vn",
 project: "javascript-nextjs",
 
+// Disable source map upload and release creation so build succeeds without SENTRY_AUTH_TOKEN or correct project.
+// Re-enable by removing these and setting SENTRY_AUTH_TOKEN (Sentry → Settings → Auth Tokens).
+sourcemaps: { disable: true },
+release: { create: false, finalize: false },
+
 // Only print logs for uploading source maps in CI
 silent: !process.env.CI,
 
